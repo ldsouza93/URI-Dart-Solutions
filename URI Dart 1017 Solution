@@ -1,0 +1,11 @@
+import 'dart:io';
+
+void main() {
+    int tempo = int.parse(stdin.readLineSync());
+    int vel = int.parse(stdin.readLineSync());
+    
+    int distancia = tempo * vel;
+    double gas = distancia / 12;
+    
+    print(gas.toStringAsFixed(3));
+}
