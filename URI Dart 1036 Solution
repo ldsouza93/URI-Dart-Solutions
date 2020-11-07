@@ -1,0 +1,23 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+    List<String> list = stdin.readLineSync().split(' ');
+    double a = double.parse(list[0]);
+    double b = double.parse(list[1]);
+    double c = double.parse(list[2]);
+    
+    double r1 = (-b + sqrt((b * b) - 4 * a * c)) / (2 * a);
+    double r2 = (-b - sqrt((b * b) - 4 * a * c)) / (2 * a);
+    
+    if (a <= 0.00) {
+        print('Impossivel calcular');
+    }
+    else if (((((b * b) - 4 * a * c))) < 0) {
+        print('Impossivel calcular');
+    }
+    else {
+        print('R1 = ${r1.toStringAsFixed(5)}');
+        print('R2 = ${r2.toStringAsFixed(5)}');
+    }
+}
