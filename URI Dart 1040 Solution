@@ -1,0 +1,36 @@
+import 'dart:io';
+
+void main() {
+    List<String> list = stdin.readLineSync().split(' ');
+        double n1 = double.parse(list[0]);
+        double n2 = double.parse(list[1]);
+        double n3 = double.parse(list[2]);
+        double n4 = double.parse(list[3]);
+
+    double media = (((n1 * 2) + (n2 * 3) + (n3 * 4) + (n4 * 1)) / 10);
+    
+    print('Media: ${media.toStringAsFixed(1)}');
+    
+    if (media >= 7) {
+        print('Aluno aprovado.');
+    }
+    else if (media < 5) {
+        print('Aluno reprovado.');
+    }
+    else {
+        print('Aluno em exame.');
+        
+        double exame = double.parse(stdin.readLineSync());
+
+        print('Nota do exame: ${exame.toStringAsFixed(1)}');
+        if (((exame + media) / 2) >= 5) {
+            print('Aluno aprovado.');
+        }
+        else {
+            print('Aluno reprovado.');
+        }
+        
+        print('Media final: ${((exame + media) / 2).toStringAsFixed(1)}');
+     
+    }
+}
