@@ -1,0 +1,22 @@
+import 'dart:io';
+
+void main() {
+
+List<String> linha1 = stdin.readLineSync().split(" ");
+    int cod1 = int.parse(linha1[0]);
+    int qtde1 = int.parse(linha1[1]);
+    double valor1 = double.parse(linha1[2]);
+    
+    double total1 = qtde1 * valor1;
+
+List<String> linha2 = stdin.readLineSync().split(" ");
+    int cod2 = int.parse(linha2[0]);
+    int qtde2 = int.parse(linha2[1]);
+    double valor2 = double.parse(linha2[2]);
+    
+    double total2 = qtde2 * valor2;
+    
+    double total = total1 + total2;
+    
+    print('VALOR A PAGAR: R\$ ${total.toStringAsFixed(2)}');
+}
