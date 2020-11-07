@@ -1,0 +1,12 @@
+import 'dart:io';
+
+void main() {
+ int idade = int.parse(stdin.readLineSync());
+ int anos = idade ~/ 365;
+ int meses = (idade - (anos * 365)) ~/ 30;
+ int dias = idade - (anos * 365 + meses * 30);
+ 
+ print('$anos ano(s)');
+ print('$meses mes(es)');
+ print('$dias dia(s)');
+}
