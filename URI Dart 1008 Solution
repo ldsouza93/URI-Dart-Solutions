@@ -1,0 +1,12 @@
+import 'dart:io';
+
+void main() {
+    int func = int.parse(stdin.readLineSync());
+    int horas = int.parse(stdin.readLineSync());
+    double vhora = double.parse(stdin.readLineSync());
+    
+    double salario = horas * vhora;
+    
+    print('NUMBER = $func');
+    print('SALARY = U\$ ${salario.toStringAsFixed(2)}');
+}
