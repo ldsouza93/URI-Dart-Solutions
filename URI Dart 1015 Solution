@@ -1,0 +1,16 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+    List<String> ponto1 = stdin.readLineSync().split(" ");
+        double x1 = double.parse(ponto1[0]);
+        double y1 = double.parse(ponto1[1]);
+    
+    List<String> ponto2 = stdin.readLineSync().split(" ");
+        double x2 = double.parse(ponto2[0]);
+        double y2 = double.parse(ponto2[1]);
+        
+    double calc = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    
+    print(calc.toStringAsFixed(4));
+}
