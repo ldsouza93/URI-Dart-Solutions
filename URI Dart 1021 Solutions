@@ -1,0 +1,33 @@
+import 'dart:io';
+
+void main() {
+    double valor = double.parse(stdin.readLineSync());
+    
+    var notas100 = valor ~/ 100;
+    var notas50 = (valor - (notas100 * 100)) ~/ 50;
+    var notas20 = (valor - ((notas100 * 100) + (notas50 * 50))) ~/ 20;
+    var notas10 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20))) ~/ 10;
+    var notas5 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10))) ~/ 5;
+    var notas2 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5))) ~/ 2;
+    var moedas1 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2))) ~/ 1;
+    var moedas50 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2) + (moedas1 * 1))) ~/ 0.50;
+    var moedas25 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2) + (moedas1 * 1) + (moedas50 * 0.50))) ~/ 0.25;
+    var moedas10 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2) + (moedas1 * 1) + (moedas50 * 0.50) + (moedas25 * 0.25))) ~/ 0.10;
+    var moedas5 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2) + (moedas1 * 1) + (moedas50 * 0.50) + (moedas25 * 0.25) + (moedas10 * 0.10))) ~/ 0.05;
+    var moedas01 = (valor - ((notas100 * 100) + (notas50 * 50) + (notas20 * 20) + (notas10 * 10) + (notas5 * 5) + (notas2 * 2) + (moedas1 * 1) + (moedas50 * 0.50) + (moedas25 * 0.25) + (moedas10 * 0.10) + (moedas5 * 0.05))) / 0.01;
+
+    print('NOTAS:');
+    print('$notas100 nota(s) de R\$ 100.00');
+    print('$notas50 nota(s) de R\$ 50.00');
+    print('$notas20 nota(s) de R\$ 20.00');
+    print('$notas10 nota(s) de R\$ 10.00');
+    print('$notas5 nota(s) de R\$ 5.00');
+    print('$notas2 nota(s) de R\$ 2.00');
+    print('MOEDAS:');
+    print('$moedas1 moeda(s) de R\$ 1.00');
+    print('$moedas50 moeda(s) de R\$ 0.50');
+    print('$moedas25 moeda(s) de R\$ 0.25');
+    print('$moedas10 moeda(s) de R\$ 0.10');
+    print('$moedas5 moeda(s) de R\$ 0.05');
+    print('${moedas01.toStringAsFixed(0)} moeda(s) de R\$ 0.01');
+}
