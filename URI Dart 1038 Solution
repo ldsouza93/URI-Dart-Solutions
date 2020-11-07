@@ -1,0 +1,26 @@
+import 'dart:io';
+
+void main() {
+    List<String> lista = stdin.readLineSync().split(' ');
+        int a = int.parse(lista[0]);
+        int b = int.parse(lista[1]);
+	double c;
+        
+    if (a == 1) {
+        c = 4;
+    }
+    else if (a == 2) {
+        c = 4.5;
+    }
+    else if (a == 3) {
+        c = 5;
+    }
+    else if (a == 4) {
+        c = 2;
+    }
+    else if (a == 5) {
+        c = 1.5;
+    }
+    
+    print('Total: R\$ ' + (b * c).toStringAsFixed(2));
+}
