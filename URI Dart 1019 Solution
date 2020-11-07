@@ -1,0 +1,16 @@
+import 'dart:io';
+
+String _printDuration(Duration duration) {
+  String twoDigits(int n) => n.toString().padLeft(1, "0");
+  String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
+  String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
+  return "${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds";
+}
+
+void main(){
+  int tempo = int.parse(stdin.readLineSync());
+  
+  final now = Duration(seconds: tempo);
+  
+  print("${_printDuration(now)}");
+}
