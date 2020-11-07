@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main() {
+    List<String> lista = stdin.readLineSync().split(" ");
+        int A = int.parse(lista[0]);
+        int B = int.parse(lista[1]);
+        int C = int.parse(lista[2]);
+
+    if (A > B && A > C) {
+        print('$A eh o maior');
+    }
+    else if (B > C) { 
+        print('$B eh o maior');
+    }
+    else {
+        print('$C eh o maior');        
+    }
+}
